@@ -22,4 +22,12 @@ async function scrapeAll(browserInstance){
     }
 }
 
+app.get('/', (req, res) => {
+    res.json('Welcome to my Wrestling News API')
+});
+
+app.get('/news', (req, res) => {
+    res.json(scrapedData)
+});
+
 module.exports = (browserInstance) => scrapeAll(browserInstance)
