@@ -78,3 +78,11 @@ const scraperObject = {
 }
 
 module.exports = scraperObject;
+
+app.get('/', (req, res) => {
+    res.json('Welcome to my Wrestling News API')
+});
+
+app.get('/news', (req, res) => {
+    res.json(scraperObject)
+});
